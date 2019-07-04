@@ -1,3 +1,3 @@
 # Java-Coding-Exercises
 
-Different JAVA coding projects.  Continuing learning about JAVA.
+Different JAVA practice coding projects.  
