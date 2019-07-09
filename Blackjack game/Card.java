@@ -1,3 +1,5 @@
+//Card class - set up cards
+
 public class Card {
 
 	private Suit suit;
