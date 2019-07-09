@@ -1,3 +1,5 @@
+//array list and random dealings for blackjack game
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -6,12 +8,12 @@ public class Deck {
 	private ArrayList<Card> cards;
 
 	public Deck(){
-		//Create a new deck of playing cards
+//Creates new deck of playing cards
 		this.cards = new ArrayList<Card>();
 
 	}
 
-	//Add 52 playing cards to a deck
+//Add 52 playing cards to a deck
 	public void createFullDeck(){
 		//Generate Cards
 		//Loop Through Suits
@@ -25,7 +27,7 @@ public class Deck {
 	}
 
 
-//Shuffle deck of cards
+//Shuffle
 public void shuffle(){
 	//Create a new arraylist to hold the shuffled cards temporarily
 	ArrayList<Card> tmpDeck = new ArrayList<Card>();
@@ -41,7 +43,7 @@ public void shuffle(){
 		//remove picked from old deck
 		this.cards.remove(randomCardIndex);
 	}
-	//set this.deck to our newly shuffled deck
+//Set this.deck to our newly shuffled deck
 	this.cards = tmpDeck;
 }
 
@@ -50,17 +52,17 @@ public void shuffle(){
 	public void removeCard(int i){
 		this.cards.remove(i);
 	}
-	//Get card from deck
+	//Gets card from deck
 	public Card getCard(int i){
 		return this.cards.get(i);
 	}
 
-	//Add card to deck
+	//Adds card to deck
 	public void addCard(Card addCard){
 		this.cards.add(addCard);
 	}
 
-	//Draw a top card from deck
+	//Draws top card from deck
 	public void draw(Deck comingFrom){
 		//Add card to this deck from whatever deck its coming from
 		this.cards.add(comingFrom.getCard(0));
