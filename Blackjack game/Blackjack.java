@@ -22,8 +22,10 @@ public class Blackjack {
 
 		//playerCards will be the cards the player has in their hand
 		Deck playerCards = new Deck();
-		//playerMoney holds players cash - we will be lazy and use doubles instead of bigdecimals
+		
+		//playerMoney holds players cash - use doubles instead of bigdecimals
 		double playerMoney = 100.0;
+		
 		//dealerCards will be the cards the dealer has in their hand
 		Deck dealerCards = new Deck();
 
@@ -31,12 +33,14 @@ public class Blackjack {
 		Scanner userInput = new Scanner(System.in);
 
 		//Play the game while the player has money
-		//Game loop
+		//loops the game
+		
 while(playerMoney>0){
-	//Take Bet
+	//Betting
 	System.out.println("You have $" + playerMoney + ", how much would you like to bet?");
 	double playerBet = userInput.nextDouble();
 	boolean endRound = false;
+	
 	if(playerBet > playerMoney){
 		//Break if they bet too much
 		System.out.println("You cannot bet more than you have.");
@@ -52,7 +56,7 @@ while(playerMoney>0){
 	dealerCards.draw(playingDeck);
 	dealerCards.draw(playingDeck);
 
-			//While loop for drawing new cards
+	//While loop for drawing new cards
 			while(true)
 			{
 				//Display player cards
@@ -87,7 +91,7 @@ while(playerMoney>0){
 
 			}
 
-			//Reveal Dealer Cards
+	//Reveal Dealer Cards
 			System.out.println("Dealer Cards:" + dealerCards.toString());
 			//See if dealer has more points than player
 			if((dealerCards.cardsValue() > playerCards.cardsValue())&&endRound == false){
@@ -131,7 +135,7 @@ while(playerMoney>0){
 			System.out.println("End of Hand.");
 
 		}
-		//Game is over
+		//Game is over!
 		System.out.println("Game over! You lost all your money. :(");
 
 		//Close Scanner
