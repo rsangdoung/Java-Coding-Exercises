@@ -1,4 +1,14 @@
+/* Riam Sangdoung - practice blackjack game - ongoing project
+TechLiterate:
+https://www.youtube.com/watch?v=buGFs1aQgaY&t=89s
 
+Chris Reeves Blackjack tutorial:
+http://www.chrisreeves.com/programming/java/blackjack/
+
+Blackjack game tutorial by WMarchSTeinman:
+https://www.youtube.com/watch?v=kikDJkwErT0
+
+*/ 
 public class Blackjack {
 
 	public static void main(String[] args){
